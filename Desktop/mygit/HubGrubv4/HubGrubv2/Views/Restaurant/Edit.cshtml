@@ -1,0 +1,46 @@
+﻿@model HubGrubv2.Models.RestaurantModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RestaurantModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RestaurantID" />
+            <div class="form-group">
+                <label asp-for="RestaurantName" class="control-label"></label>
+                <input asp-for="RestaurantName" class="form-control" />
+                <span asp-validation-for="RestaurantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantHours" class="control-label"></label>
+                <input asp-for="RestaurantHours" class="form-control" />
+                <span asp-validation-for="RestaurantHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantAddress" class="control-label"></label>
+                <input asp-for="RestaurantAddress" class="form-control" />
+                <span asp-validation-for="RestaurantAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantPhoneNumber" class="control-label"></label>
+                <input asp-for="RestaurantPhoneNumber" class="form-control" />
+                <span asp-validation-for="RestaurantPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

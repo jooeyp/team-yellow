@@ -1,0 +1,26 @@
+﻿@page
+@model HubGrubv2.Views.Restaurant.IndexModel
+
+
+<div class="jumbotron">
+    <h1>Restaurants</h1>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Restaurants[0].RestaurantName)</th>
+            <th>@Html.DisplayNameFor(m => m.Restaurants[0].RestaurantAddress)</th>
+            <th>@Html.DisplayNameFor(m => m.Restaurants[0].RestaurantHours)</th>
+            <th>@Html.DisplayNameFor(m => m.Restaurants[0].RestaurantPhoneNumber)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Restaurants)
+        {
+            <td>@Html.DisplayFor(m => item.RestaurantName)</td>
+            <td>@Html.DisplayFor(m => item.RestaurantAddress)</td>
+            <td>@Html.DisplayFor(m => item.RestaurantHours)</td>
+            <td>@Html.DisplayFor(m => item.RestaurantPhoneNumber)</td>
+        }
+    </tbody>
+</table>
